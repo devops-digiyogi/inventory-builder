@@ -1,0 +1,17 @@
+@import 'scss/_variables.scss';
+.inventoryContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $gray;
+
+  padding: 2.5rem;
+  .searchContainer {
+    display: flex;
+    width: 22.5rem;
+    height: 2.5rem;
+    .searchBtn {
+      margin-left: 0.9375rem;
+      border-radius: 1.25rem;
+    }
+  }
+}

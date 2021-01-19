@@ -1,0 +1,21 @@
+.inputWithCheckBoxContainer {
+  display: flex;
+  .numberInput {
+    max-width: 6.5rem;
+    margin-right: 0.5rem;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    background-color: #f3f3f3;
+    margin-right: 0.3125rem;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    margin-left: 1.4375rem;
+    height: 2.5rem;
+    input {
+      position: unset;
+      margin-right: 0.1875rem;
+    }
+  }
+}

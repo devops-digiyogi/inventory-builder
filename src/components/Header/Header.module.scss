@@ -1,0 +1,10 @@
+@import 'scss/_variables.scss';
+.inventoryHeader {
+  background-color: $white;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  h5 {
+    font-size: 1.875rem;
+  }
+}

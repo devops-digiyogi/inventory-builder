@@ -1,0 +1,27 @@
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+.searchInput {
+  display: flex;
+  position: relative;
+  align-items: center;
+  input {
+    border-radius: 1.25rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .clearBtn {
+    position: absolute;
+    right: 1.25rem;
+    font-size: 1.25rem;
+    display: flex;
+    color: #565656;
+  }
+  .searchIcon {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.25rem;
+    display: flex;
+    color: #565656;
+  }
+}
