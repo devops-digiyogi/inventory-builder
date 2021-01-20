@@ -4,7 +4,7 @@ import './scss/index.scss';
 import InventoryBuilder from './inventoryBuilder';
 
 function App() {
-  return <InventoryBuilder />;
+  return  <InventoryBuilder />;
 }
 
 export default App;

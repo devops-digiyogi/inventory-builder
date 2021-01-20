@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import SearchInput from 'components/SearchInput';
 import InventoryList from 'inventoryBuilder/InventoryList';
 
+
 import styles from './InventoryContainer.module.scss';
 import TableData, { data } from './Partials';
 import { Button } from 'reactstrap';
@@ -12,7 +13,6 @@ InventoryContainer.propTypes = {};
 
 function InventoryContainer(props) {
   const [dataSource, setDataSource] = useState(data || []);
-  const [searchedData, setSearchedData] = useState([]);
   const [searchValue, setSearchValue] = useState('');
   const [stockValue, setStock] = useState('');
   const [isUnlimited, setIsUnlimited] = useState(false);
@@ -45,9 +45,11 @@ function InventoryContainer(props) {
   const handleSearch = () => {
     resetEditField();
     if (searchValue) {
-      const updatedData = dataSource.filter((category) => {});
+      const updatedData = dataSource.filter((category) => {
+        return setDataSource(dataSource);
+      });
+      setSearchValue(updatedData);
     }
-    return setDataSource(dataSource);
   };
 
   const handleStockValueChange = (value) => {
@@ -108,7 +110,7 @@ function InventoryContainer(props) {
         <SearchInput
           onSearchValueChange={setSearchValue}
           searchValue={searchValue}
-          placeholderText={'Search by Item Name'}
+          placeholderText={'Search by Item Name, SKU id..s'}
         />
         <Button
           color='primary'

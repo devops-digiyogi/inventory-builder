@@ -103,8 +103,8 @@ export const data = [
   },
   {
     name: 'SNACKS',
-    cat_id: 'CAT124',
-    id: 'CAT124',
+    cat_id: 'CAT125',
+    id: 'CAT125',
     isAvailable: true,
     subcategories: [
       {
@@ -141,8 +141,8 @@ export const data = [
   },
   {
     name: 'Cleaning and Household',
-    cat_id: 'CAT124',
-    id: 'CAT124',
+    cat_id: 'CAT126',
+    id: 'CAT126',
     isAvailable: true,
     subcategories: [
       {
