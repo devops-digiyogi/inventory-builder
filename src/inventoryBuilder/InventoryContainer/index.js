@@ -41,15 +41,30 @@ function InventoryContainer(props) {
     });
     setDataSource(tempDataList);
   };
-
+  
   const handleSearch = () => {
     resetEditField();
+    let updatedData  = []
     if (searchValue) {
-      const updatedData = dataSource.filter((category) => {
-        return setDataSource(dataSource);
+      updatedData = dataSource.filter((category) => {
+        let isInCategories;
+        let isInSubCategories;
+        let isInItems;
+        isInCategories = category.name.toLowerCase().includes(searchValue.toLowerCase());
+
+        let filteredSubcategory = category.subcategories.filter(subCategories => {
+          console.log('subcategories', subCategories.name)
+          isInSubCategories = subCategories.name.toLowerCase().includes(searchValue.toLowerCase());
+
+          let filteredItems = subCategories.items.filter(item => {
+            return item.name.toLowerCase().includes(searchValue.toLowerCase());
+          })
+          return filteredItems.length > 0 || isInSubCategories;
+        })
+        return  filteredSubcategory.length > 0 || isInCategories;
       });
-      setSearchValue(updatedData);
     }
+    setDataSource(updatedData);
   };
 
   const handleStockValueChange = (value) => {
